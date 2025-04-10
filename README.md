@@ -14,8 +14,8 @@ A Delphi/Object Pascal port of [alizain/ulid](https://github.com/alizain/ulid).
 * Case insensitive
 * No special characters (URL safe)
 * [Delphi] Is faster than CreateGUID
-* Crypto random
-* DecodeULIDDateTime
+* + Crypto random
+* + DecodeULIDDateTime
 
 For more information, check out [ULID's README](https://github.com/alizain/ulid/blob/master/README.md).
 
