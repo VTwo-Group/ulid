@@ -7,16 +7,16 @@ program UnitTestULID;
 uses
   DUnitTestRunner,
   ULID in '..\ULID.pas',
+  MultiPlatformCryptoRandom in '..\MultiPlatformCryptoRandom.pas',
   ULIDTests in 'ULIDTests.pas';
 
 {$R *.RES}
 
 begin
-  {$WARN SYMBOL_PLATFORM OFF}
+{$WARN SYMBOL_PLATFORM OFF}
   ReportMemoryLeaksOnShutDown := DebugHook <> 0;
-  {$WARN SYMBOL_PLATFORM ON}
-
+{$WARN SYMBOL_PLATFORM ON}
   DUnitTestRunner.RunRegisteredTests;
   ReadLn;
-end.
 
+end.

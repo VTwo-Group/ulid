@@ -19,15 +19,15 @@ implementation
 uses
   Classes,
   SysUtils;
-  
+
 { TULIDTests }
 
 procedure TULIDTests.TestCreateULID;
 var
-  Ulid: string;
+  ULID: string;
 begin
-  Ulid := CreateULID;
-  CheckEquals(Length(Ulid), 26);
+  ULID := Generate;
+  CheckEquals(Length(ULID), 26);
 end;
 
 procedure TULIDTests.TestEncodeTime;
@@ -49,7 +49,7 @@ begin
     Ulids := TStringList.Create;
     for I := 0 to 10 do
     begin
-      Ulids.Add(CreateULID);
+      Ulids.Add(Generate);
       Sleep(42);
     end;
 
@@ -66,6 +66,7 @@ begin
 end;
 
 initialization
-  RegisterTest(TULIDTests.Suite);
+
+RegisterTest(TULIDTests.Suite);
 
 end.
